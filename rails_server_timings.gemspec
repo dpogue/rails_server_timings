@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary   = 'Server Timing headers for Rails apps'
 
   s.require_paths = ['lib']
-  s.executable    = []
+  s.executables   = []
 
   s.add_runtime_dependency('railties', '>= 3.0.0')
 end
