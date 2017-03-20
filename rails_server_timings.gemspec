@@ -11,8 +11,22 @@ Gem::Specification.new do |s|
 
   s.summary   = 'Server Timing headers for Rails apps'
 
-  s.require_paths = ['lib']
+  s.files      = [
+    '.editorconfig',
+    '.gitignore',
+    'CODE_OF_CONDUCT.md',
+    'Gemfile',
+    'LICENCE',
+    'README.md',
+    'Rakefile',
+    'lib/rails_server_timings.rb',
+    'lib/rails_server_timings/controller_runtime.rb',
+    'lib/rails_server_timings/railtie.rb',
+    'lib/rails_server_timings/version.rb',
+    'rails_server_timings.gemspec'
+  ]
   s.executables   = []
+  s.require_paths = ['lib']
 
   s.add_runtime_dependency('railties', '>= 3.0.0')
 end
