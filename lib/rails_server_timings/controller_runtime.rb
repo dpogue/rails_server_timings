@@ -8,11 +8,11 @@ module RailsServerTimings
 
         payload.each do |key, value|
           if idx = key.to_s =~ /_runtime/
-            timings << ("#{key[0, idx]}=%.1f" % value.to_f)
+            timings << ("#{key[0, idx]}=%.1f" % (value.to_f/1000.0))
           end
         end
 
-        timings << ("total=%.1f" % event.duration.to_f)
+        timings << ("total=%.1f" % (event.duration.to_f/1000.0))
 
         response.headers['Server-Timing'] = timings.join(', ')
       end
