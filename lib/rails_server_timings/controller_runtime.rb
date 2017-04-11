@@ -11,7 +11,7 @@ module RailsServerTimings
         # Chrome 57 and lower interpret the header in seconds instead of
         # milliseconds, so we need to divide all the results by a factor of
         # 1000
-        if match = request.user_agent.match(/Chrome\/(\d+)/)
+        if match = request.user_agent.try(:match, /Chrome\/(\d+)/)
           factor = 0.0001 if match[1] and match[1].to_i < 58
         end
 
