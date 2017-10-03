@@ -7,7 +7,7 @@ module RailsServerTimings
         timings = []
 
         payload.each do |key, value|
-          if idx = key.to_s =~ /_runtime/
+          if idx = key.to_s =~ /\w+_runtime$/
             timings << ("#{key[0, idx]}=%.3f" % value.to_f)
           end
         end
